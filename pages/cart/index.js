@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import Cart from '../../components/cart';
 import Checkout from '../../components/checkout';
+import Header from "../../components/header"
 
 const Home = () => {
   const { addToCart, content } = Cart();
@@ -12,11 +13,13 @@ const Home = () => {
   ];
 
   return (
+    <>
     <div>
       <Head>
-        <title>Next.js Commerce Site</title>
-        <meta name="description" content="Your commerce site description" />
+        <title>UNIK sport</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header/>
       <h1>Welcome to my Commerce Site</h1>
       <ul>
         {products.map((product) => (
@@ -31,6 +34,7 @@ const Home = () => {
       </div>
       <Checkout />
     </div>
+    </>
   );
 };
 
