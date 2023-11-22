@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
+import Header from '../components/header'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 
 type ConnectionStatus = {
@@ -35,9 +36,11 @@ export default function Home({
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
+    <><Header />
     <div className="container">
+
       <Head>
-        <title>Create Next App</title>
+        <title>UNIK sport</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -252,6 +255,6 @@ export default function Home({
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </div></>
   )
 }
