@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { auth } from '../../config/firebase';
 import { useRouter } from "next/router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -36,29 +37,34 @@ const Signup = (req, res) => {
 
     return (
         <div>
+            <Head>
+                <title>UNIK sport - Inscription</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <div>
+                
                 <form onSubmit={handleLogin}>
                     <h1>Inscription</h1>
-                    <input 
-                        id="email" 
-                        type="email" 
-                        name="email" 
-                        placeholder="Email" 
-                        onChange={e => setEmail(e.target.value)} 
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        onChange={e => setEmail(e.target.value)}
                     />
-                    <input 
-                        type="password" 
-                        name="password" 
-                        id="password" 
-                        placeholder="Mot de passe" 
-                        onChange={e => setPassword(e.target.value)} 
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Mot de passe"
+                        onChange={e => setPassword(e.target.value)}
                     />
-                    <input 
-                        type="password" 
-                        name="password" 
-                        id="password" 
-                        placeholder="Confirmer mot de passe" 
-                        onChange={e => setValidatePassword(e.target.value)} 
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Confirmer mot de passe"
+                        onChange={e => setValidatePassword(e.target.value)}
                     />
                     <div>
                         <button type="submit">S'inscrire</button>

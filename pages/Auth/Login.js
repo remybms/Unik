@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Head from 'next/head';
 import { auth } from '../../config/firebase';
 import { useRouter } from "next/router";
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -49,6 +50,10 @@ function Login() {
 
   return (
     <div>
+      <Head>
+        <title>UNIK sport - Connexion</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <ToastContainer />
       <div>
         <form onSubmit={loginUser}>
