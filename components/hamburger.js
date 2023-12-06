@@ -28,7 +28,7 @@ function Hamburger(){
     }
     return(
         <div>
-            <Menu customBurgerIcon={<FaShoppingCart size={42} />} styles={styles} menuClassName='w-28'>
+            <Menu customBurgerIcon={<FaShoppingCart size={42} />} styles={styles} right>
                 <Cart/>
             </Menu>
         </div>
