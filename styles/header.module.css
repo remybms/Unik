@@ -1,3 +1,19 @@
 .all{
     display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 29px;
+}
+
+.links{
+    display: flex;
+}
+
+.link{
+    margin: 2%;
+}
+
+.cartButton{
+    display: flex;
 }
