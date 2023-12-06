@@ -1,40 +1,38 @@
-// components/Cart.js
-import { useState } from 'react';
+import { useCart } from "react-use-cart";
 
-const Cart = () => {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (item) => {
-    setCart((cart) => [...cart, item]);
-  };
-
-  const removeFromCart = (index) => {
-    const newCart = [...cart];
-    newCart.splice(index, 1);
-    setCart(newCart);
-  };
-
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.price, 0);
-  };
-
-  return {
-    addToCart,
-    content: (
-      <div>
-        <h2>Shopping Cart</h2>
+export function Cart() {
+    const {
+      isEmpty,
+      totalUniqueItems,
+      items,
+      updateItemQuantity,
+      removeItem,
+    } = useCart();
+  
+    if (isEmpty) return <p>Your cart is empty</p>;
+  
+    return (
+      <>
+        <h1>Cart ({totalUniqueItems})</h1>
+  
         <ul>
-          {cart.map((item, index) => (
-            <li key={index}>
-              {item.name} - ${item.price}
-              <button onClick={() => removeFromCart(index)}>Remove</button>
+          {items.map((item) => (
+            <li key={item.id}>
+              {item.quantity} x {item.name} &mdash;
+              <button
+                onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
+              >
+                -
+              </button>
+              <button
+                onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
+              >
+                +
+              </button>
+              <button onClick={() => removeItem(item.id)}>&times;</button>
             </li>
           ))}
         </ul>
-        <p>Total: ${calculateTotal()}</p>
-      </div>
-    ),
-  };
-};
-
-export default Cart;
+      </>
+    );
+  }
