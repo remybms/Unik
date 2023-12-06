@@ -16,14 +16,15 @@ export default function Header(){
                 <div className={styles.link}>Boutique</div>
                 <div className={styles.link}>Atelier</div>
             </div>
-            <div className={styles.cartButton}>
-                <Hamburger />
-            </div>
+            
             {user ?
                     <Link href="/profile"><CgProfile size={42} /></Link>
                     :
                     <Link as="/connexion" href="/Auth/Login"><CgProfile size={42} /></Link>
             }
+            <div className={styles.cartButton}>
+                <Hamburger />
+            </div>
         </div></>
     )
 }
