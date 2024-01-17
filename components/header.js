@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 
 export default function Header(){
-    const user = auth.currentUser;
     return(
         <><div className={styles.all}>
             <img src='/img/UNIK.webp' width={198} height={37}/>
