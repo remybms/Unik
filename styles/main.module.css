@@ -12,10 +12,12 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
-    margin-right: 40%;
-    margin-left: 10%;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    padding-right: 40%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    background-image: url('/img/BANNIERE-SITE-WEB-BLOC-1.jpg');
+    background-size: 100vw 100vh;
 }
 
 .title{
@@ -50,7 +52,7 @@
     flex-direction: column;
     align-items: center;
     padding: 10%;
-    background-color: purple;
+    background: linear-gradient(#000033, #35086a);
 }
 
 .text{
