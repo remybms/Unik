@@ -13,8 +13,7 @@ export default function Header(){
             <img src='/img/UNIK.webp' width={198} height={37}/>
             <div className={styles.links}>
                 <Link href="/" className={styles.link}>Accueil</Link>
-                <div className={styles.link}>Boutique</div>
-                <div className={styles.link}>Atelier</div>
+                <div className={styles.link}>Produits</div>
             </div>
             
             {user ?
