@@ -50,7 +50,7 @@ export default function Home({
       <div className={styles.intro}>
         <div className={styles.title}>SOYEZ <span className={styles.detail}>UNIK</span> AVEC STYLE</div>
         <div className={styles.subtitle}>PERSONNALISEZ VOS ÉQUIPEMENTS</div>
-        <Link href='/' className={styles.button}>VOIR NOS PRODUITS</Link>
+        <Link href='/product' className={styles.button}>VOIR NOS PRODUITS</Link>
       </div>
 
       <div className={styles.engagement}>

@@ -10,9 +10,9 @@ export default function Footer() {
                 <div>
                     <div className={styles.title}>Liens important</div>
                     <div className={styles.links}>
-                        <div>
+                        <div className={styles.pages}>
                             <Link href="/">Accueil</Link>
-                            <div>L'atelier personnalisation</div>
+                            <Link href="/product">Produits</Link>
                         </div>
                         <div>
                             <div>
