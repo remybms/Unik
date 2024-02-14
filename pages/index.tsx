@@ -74,6 +74,18 @@ export default function Home({
         </div>
       </div>
 
+      <div className={styles.newsletter}>
+        <div className={styles.subtitle}>
+          Newsletter
+        </div>
+        <form className={styles.form}>
+          <input type='text' placeholder='Prénom' />
+          <input type='text' placeholder='Nom' />
+          <input type='mail' placeholder='Adresse mail' />
+          <button type='submit'>S'abonner</button>
+        </form>
+      </div>
+
       <Footer />
     </main>
   )

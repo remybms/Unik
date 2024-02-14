@@ -65,8 +65,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5%;
+    
     padding: 5%;
     background-color: aliceblue;
     color: black;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    background: linear-gradient(#35086a, #000033 );
+    margin-bottom: 5%;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr;
 }
