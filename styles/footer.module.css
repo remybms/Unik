@@ -18,3 +18,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
+
+.pages{
+    display: flex;
+    flex-direction: column;
+}
