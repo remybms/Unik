@@ -5,9 +5,14 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import 'normalize.css';
 
+interface Product {
+    product: string;
+    unit_price: number;
+  }
+
 export default function Product() {
 
-    const [data, setData] = React.useState([]);
+    const [data, setData] = React.useState<Product[]>([]);
 
     React.useEffect(() => {
         const fetchData = async () => {
@@ -34,8 +39,6 @@ export default function Product() {
             {data.map((item) => (
                 <div className={styles.card}>
                     <div>{item.product}</div>
-                    <div>{item.sport}</div>
-                    <div>{item.type}</div>
                     <div>{item.unit_price}</div>
                 </div>
             ))}
