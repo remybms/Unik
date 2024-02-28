@@ -6,6 +6,7 @@ import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import styles from '../styles/main.module.css'
 import Link from 'next/link'
 import 'normalize.css'
+import React from 'react'
 
 type ConnectionStatus = {
   isConnected: boolean
@@ -39,6 +40,32 @@ export const getServerSideProps: GetServerSideProps<
 export default function Home({
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+
+  const [name, setName] = React.useState("");
+  const [surname, setSurname] = React.useState("");
+  const [mail, setMail] = React.useState("");
+
+  async function sendData(e: { preventDefault: () => void }) {
+    e.preventDefault();
+    var data
+    try {
+        const response = await fetch('/api/newsletter', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                "name": name,
+                "surname": surname,
+                "mail": mail
+                }),
+        });
+
+        data = await response.json();
+    } catch (error) {
+        console.error('Erreur lors de l\'envoi des données à l\'API :', error);
+    }
+}
   return (
 
     <main className={styles.all}>
@@ -78,11 +105,11 @@ export default function Home({
         <div className={styles.subtitle}>
           Newsletter
         </div>
-        <form className={styles.form}>
-          <input type='text' placeholder='Prénom' />
-          <input type='text' placeholder='Nom' />
-          <input type='mail' placeholder='Adresse mail' />
-          <button type='submit'>S'abonner</button>
+        <form className={styles.form} onSubmit={sendData}>
+          <input type='text' placeholder='Prénom' className={styles.formValue} required onChange={e => setName(e.target.value)}/>
+          <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)}/>
+          <input type='mail' placeholder='Adresse mail' className={styles.mail} required onChange={e => setMail(e.target.value)}/>
+          <button type='submit' className={styles.formValue}>S'abonner</button>
         </form>
       </div>
 

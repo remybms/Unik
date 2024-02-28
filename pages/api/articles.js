@@ -8,7 +8,6 @@ export default async (req, res) => {
        const articles = await db
            .collection("articles")
            .find({})
-           .limit(10)
            .toArray();
 
        res.json(articles);
