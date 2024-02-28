@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
       const result = await collection.insertOne(data);
 
-      res.status(201).json({ success: true, data: result.ops ?? [] });
+      res.status(201).json(true);
 
     } catch (error) {
       console.error('Erreur lors de l\'opération MongoDB :', error);

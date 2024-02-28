@@ -7,6 +7,8 @@ import styles from '../styles/main.module.css'
 import Link from 'next/link'
 import 'normalize.css'
 import React from 'react'
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 type ConnectionStatus = {
   isConnected: boolean
@@ -65,6 +67,11 @@ export default function Home({
     } catch (error) {
         console.error('Erreur lors de l\'envoi des données à l\'API :', error);
     }
+    if (data == true) {
+      toast.success("Abonnement à la newsletter réussi !")
+    } else {
+      toast.error("Abonnement à la newsletter échoué !")
+    }
 }
   return (
 
@@ -73,6 +80,7 @@ export default function Home({
         <title>UNIK sport</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ToastContainer/>
       <Header />
       <div className={styles.intro}>
         <div className={styles.title}>SOYEZ <span className={styles.detail}>UNIK</span> AVEC STYLE</div>
