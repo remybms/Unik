@@ -8,8 +8,8 @@ export default function Header(){
         <><div className={styles.all}>
             <img src='/img/UNIK.webp' width={198} height={37}/>
             <div className={styles.links}>
-                <Link href="/" className={styles.link}>Accueil</Link>
-                <Link href="/product" className={styles.link}>Produits</Link>
+                <Link href="/" className={styles.link} style={{ color: 'blueviolet', textDecoration: 'none' }}>Accueil</Link>
+                <Link href="/product" className={styles.link} style={{ color: 'blueviolet', textDecoration: 'none' }}>Produits</Link>
             </div>
         </div></>
     )
