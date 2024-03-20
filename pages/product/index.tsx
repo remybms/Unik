@@ -77,8 +77,8 @@ export default function Product() {
                 <title>UNIK sport - produits</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <ToastContainer />
             <Header />
+            <ToastContainer />
             <div className={styles.cards}>
                 {data.map((item) => (
                     <div className={styles.card}>
