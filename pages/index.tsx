@@ -51,28 +51,28 @@ export default function Home({
     e.preventDefault();
     var data
     try {
-        const response = await fetch('/api/newsletter', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                "name": name,
-                "surname": surname,
-                "mail": mail
-                }),
-        });
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          "name": name,
+          "surname": surname,
+          "mail": mail
+        }),
+      });
 
-        data = await response.json();
+      data = await response.json();
     } catch (error) {
-        console.error('Erreur lors de l\'envoi des données à l\'API :', error);
+      console.error('Erreur lors de l\'envoi des données à l\'API :', error);
     }
     if (data == true) {
       toast.success("Abonnement à la newsletter réussi !")
     } else {
       toast.error("Abonnement à la newsletter échoué !")
     }
-}
+  }
   return (
 
     <main className={styles.all}>
@@ -80,7 +80,7 @@ export default function Home({
         <title>UNIK sport</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ToastContainer/>
+      <ToastContainer />
       <Header />
       <div className={styles.intro}>
         <div className={styles.title}>SOYEZ <span className={styles.detail}>UNIK</span> AVEC STYLE</div>
@@ -114,9 +114,9 @@ export default function Home({
           Newsletter
         </div>
         <form className={styles.form} onSubmit={sendData}>
-          <input type='text' placeholder='Prénom' className={styles.formValue} required onChange={e => setName(e.target.value)}/>
-          <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)}/>
-          <input type='mail' placeholder='Adresse mail' className={styles.mail} required onChange={e => setMail(e.target.value)}/>
+          <input type='text' placeholder='Prénom' className={styles.formValue} required onChange={e => setName(e.target.value)} />
+          <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)} />
+          <input type='mail' placeholder='Adresse mail' className={styles.mail} required onChange={e => setMail(e.target.value)} />
           <button type='submit' className={styles.formValue}>S'abonner</button>
         </form>
       </div>
