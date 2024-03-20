@@ -11,18 +11,18 @@ export default function Footer() {
                     <div className={styles.title}>Liens important</div>
                     <div className={styles.links}>
                         <div className={styles.pages}>
-                            <Link href="/">Accueil</Link>
-                            <Link href="/product">Produits</Link>
+                            <Link href="/" style={{ color: 'blueviolet', textDecoration: 'none' }}>Accueil</Link>
+                            <Link href="/product" style={{ color: 'blueviolet', textDecoration: 'none' }}>Produits</Link>
                         </div>
                         <div>
                             <div>
-                                <Link href="https://unik-sport.com/?page_id=422">Mentions légales</Link>
+                                <Link href="https://unik-sport.com/?page_id=422" style={{ color: 'blueviolet', textDecoration: 'none' }}>Mentions légales</Link>
                             </div>
                             <div>
-                                <Link href="https://unik-sport.com/?page_id=422">Politique de confidentialité</Link>
+                                <Link href="https://unik-sport.com/?page_id=422" style={{ color: 'blueviolet', textDecoration: 'none' }}>Politique de confidentialité</Link>
                             </div>
                             <div>
-                                <Link href="https://unik-sport.com/?page_id=422">CGV</Link>
+                                <Link href="https://unik-sport.com/?page_id=422" style={{ color: 'blueviolet', textDecoration: 'none' }}>CGV</Link>
                             </div>
 
                         </div>
@@ -34,8 +34,8 @@ export default function Footer() {
                     <div>Ne manquez pas nos promotions ! Abonnez-vous dès aujourd'hui !</div>
                 </div>
                 <div>Spécialiste dans la customisation de vêtements pour sportifs particuliers et professionnels.</div>
-                <Link href="https://www.instagram.com/_unik.sport/"><BiLogoInstagram size={42} /></Link>
-                <Link href="https://lg-design.fr/">©2023. UNIK. Par LGDESIGN</Link>
+                <Link href="https://www.instagram.com/_unik.sport/" style={{ color: 'blueviolet', textDecoration: 'none' }}><BiLogoInstagram size={42} /></Link>
+                <Link href="https://lg-design.fr/" style={{ color: 'blueviolet', textDecoration: 'none' }}>©2023. UNIK. Par LGDESIGN</Link>
             </div>
         </>
     )
