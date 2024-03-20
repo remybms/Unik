@@ -91,12 +91,12 @@ export default function Product() {
             <form className={styles.form} onSubmit={sendData}>
                 <input type='text' placeholder='Prénom' className={styles.formValue} required onChange={e => setName(e.target.value)} />
                 <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)} />
-                <input type='mail' placeholder='Adresse mail' className={styles.mail} required onChange={e => setMail(e.target.value)} />
-                <input type="text" placeholder="Téléphone" required onChange={e => setPhone(e.target.value)} />
-                <input type="text" placeholder="Pour quel sport souhaitez vouys des tenues personalisées ?" required onChange={e => setSport(e.target.value)} />
-                <input type="text" placeholder="Quel est votre club?" required onChange={e => setClub(e.target.value)} />
-                <input type="text" placeholder="Quel est votre rôle au sein du club?" required onChange={e => setRole(e.target.value)} />
-                <select required onChange={e => setQuantity(e.target.value)}>
+                <input type='mail' placeholder='Adresse mail' className={styles.formValue} required onChange={e => setMail(e.target.value)} />
+                <input type="text" placeholder="Téléphone" className={styles.formValue} required onChange={e => setPhone(e.target.value)} />
+                <input type="text" placeholder="Pour quel sport souhaitez vouys des tenues personalisées ?" className={styles.formValue} required onChange={e => setSport(e.target.value)} />
+                <input type="text" placeholder="Quel est votre club?" className={styles.formValue} required onChange={e => setClub(e.target.value)} />
+                <input type="text" placeholder="Quel est votre rôle au sein du club?" className={styles.formValue} required onChange={e => setRole(e.target.value)} />
+                <select className={styles.formValue} required onChange={e => setQuantity(e.target.value)}>
                     <option value="">--Combien de maillots vous faut-il ?--</option>
                     <option value="5-15">Entre 5 et 15</option>
                     <option value="16-30">Entre 16 et 30</option>
@@ -104,7 +104,7 @@ export default function Product() {
                     <option value="101-300">Entre 101 et 300</option>
                     <option value="300+">Plus de 300</option>
                 </select>
-                <button type="submit">Envoyez</button>
+                <button className={styles.submit} type="submit">Envoyer</button>
             </form>
             <Footer />
         </main>
