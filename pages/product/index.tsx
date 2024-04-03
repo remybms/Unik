@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 interface Product {
     product: string;
-    unit_price: number;
     image: string;
 }
 
@@ -87,7 +86,6 @@ export default function Product() {
                 {data.map((item) => (
                     <div className={styles.card}>
                         <div>{item.product}</div>
-                        <div>{item.unit_price}</div>
                         <img src={item.image} className={styles.image}/>
                     </div>
                 ))}
