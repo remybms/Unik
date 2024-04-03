@@ -16,13 +16,13 @@ export default function Footer() {
                         </div>
                         <div>
                             <div>
-                                <Link as="/MentionsLegales" href="/legal-mention/#MentionsLegales" style={{ color: 'blueviolet', textDecoration: 'none' }}>Mentions légales</Link>
+                                <Link href="/legal-mention" style={{ color: 'blueviolet', textDecoration: 'none' }}>Mentions légales</Link>
                             </div>
                             <div>
-                                <Link as="/Confidentialite" href="/legal-mention/#Confidentialité" style={{ color: 'blueviolet', textDecoration: 'none' }}>Politique de confidentialité</Link>
+                                <Link href="/legal-mention" style={{ color: 'blueviolet', textDecoration: 'none' }}>Politique de confidentialité</Link>
                             </div>
                             <div>
-                                <Link as="/CGV" href="/legal-mention/#CGV" style={{ color: 'blueviolet', textDecoration: 'none' }}>CGV</Link>
+                                <Link href="/legal-mention" style={{ color: 'blueviolet', textDecoration: 'none' }}>CGV</Link>
                             </div>
 
                         </div>
