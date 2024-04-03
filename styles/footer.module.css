@@ -27,6 +27,10 @@
 
 @media screen and (max-width: 430px) {
     .footer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .image, .unik{
         display: none;
     }
+
 }

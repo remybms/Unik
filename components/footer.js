@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <>
             <div className={styles.footer}>
-                <img src="/img/UNIK.webp" width={423} height={80} />
+                <img src="/img/UNIK.webp" width={423} height={80} className={styles.image}/>
                 <div>
                     <div className={styles.title}>Liens important</div>
                     <div className={styles.links}>
@@ -33,7 +33,7 @@ export default function Footer() {
                     <div className={styles.title}>Newsletter</div>
                     <div>Ne manquez pas nos promotions ! Abonnez-vous dès aujourd'hui !</div>
                 </div>
-                <div>Spécialiste dans la customisation de vêtements pour sportifs particuliers et professionnels.</div>
+                <div className={styles.unik}>Spécialiste dans la customisation de vêtements pour sportifs particuliers et professionnels.</div>
                 <Link href="https://www.instagram.com/_unik.sport/" style={{ color: 'blueviolet', textDecoration: 'none' }}><BiLogoInstagram size={42} /></Link>
                 <Link href="https://lg-design.fr/" style={{ color: 'blueviolet', textDecoration: 'none' }}>©2023. UNIK. Par LGDESIGN</Link>
             </div>
