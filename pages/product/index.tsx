@@ -79,6 +79,9 @@ export default function Product() {
             </Head>
             <Header />
             <ToastContainer />
+            <div className={styles.title}>
+                Nos produits
+            </div>
             <div className={styles.cards}>
                 {data.map((item) => (
                     <div className={styles.card}>
@@ -88,6 +91,9 @@ export default function Product() {
                 ))}
             </div>
 
+            <div className={styles.title}>
+                Formulaire de commande
+            </div>
             <form className={styles.form} onSubmit={sendData}>
                 <input type='text' placeholder='Prénom' className={styles.formValue} required onChange={e => setName(e.target.value)} />
                 <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)} />
