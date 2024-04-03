@@ -61,6 +61,7 @@
 
 .image{
     width: 10vw;
+    border-radius: 20px;
 }
 
 @media screen and (min-width: 431px) and (max-width: 820px) {
