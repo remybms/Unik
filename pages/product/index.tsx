@@ -88,7 +88,7 @@ export default function Product() {
                     <div className={styles.card}>
                         <div>{item.product}</div>
                         <div>{item.unit_price}</div>
-                        <img src={item.image}/>
+                        <img src={item.image} className={styles.image}/>
                     </div>
                 ))}
             </div>
