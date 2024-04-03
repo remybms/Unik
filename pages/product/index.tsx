@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 interface Product {
     product: string;
     unit_price: number;
+    image: string;
 }
 
 export default function Product() {
@@ -87,8 +88,12 @@ export default function Product() {
                     <div className={styles.card}>
                         <div>{item.product}</div>
                         <div>{item.unit_price}</div>
+                        <img src={item.image}/>
                     </div>
                 ))}
+            </div>
+            <div className={styles.subtitle}>
+                Vous ne trouvez pas votre bonheur ? N'hésitez pas à nous contacter, nous faisons sûrement votre sport !
             </div>
 
             <div className={styles.title}>
