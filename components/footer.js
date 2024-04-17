@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <>
             <div className={styles.footer}>
-                <img src="/img/UNIK.webp" width={423} height={80} className={styles.image}/>
+                <img src="/img/UNIK.webp" width={423} height={80} className={styles.image} alt="logo de la marque unik"/>
                 <div>
                     <div className={styles.title}>Liens important</div>
                     <div className={styles.links}>
