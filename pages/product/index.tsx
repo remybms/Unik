@@ -100,7 +100,7 @@ export default function Product() {
             <form className={styles.form} onSubmit={sendData}>
                 <input type='text' placeholder='Prénom' className={styles.formValue} required onChange={e => setName(e.target.value)} />
                 <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)} />
-                <input type='mail' placeholder='Adresse mail' className={styles.formValue} required onChange={e => setMail(e.target.value)} />
+                <input type='email' placeholder='Adresse mail' className={styles.formValue} required onChange={e => setMail(e.target.value)} />
                 <input type="text" placeholder="Téléphone" className={styles.formValue} required onChange={e => setPhone(e.target.value)} />
                 <input type="text" placeholder="Pour quel sport souhaitez vouys des tenues personalisées ?" className={styles.formValue} required onChange={e => setSport(e.target.value)} />
                 <input type="text" placeholder="Quel est votre club?" className={styles.formValue} required onChange={e => setClub(e.target.value)} />

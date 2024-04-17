@@ -116,7 +116,7 @@ export default function Home({
         <form className={styles.form} onSubmit={sendData}>
           <input type='text' placeholder='Prénom' className={styles.formValue} required onChange={e => setName(e.target.value)} />
           <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)} />
-          <input type='mail' placeholder='Adresse mail' className={styles.mail} required onChange={e => setMail(e.target.value)} />
+          <input type='email' placeholder='Adresse mail' className={styles.mail} required onChange={e => setMail(e.target.value)} />
           <button type='submit' className={styles.formValue}>S'abonner</button>
         </form>
       </div>
