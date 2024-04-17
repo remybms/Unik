@@ -105,7 +105,7 @@ export default function Product() {
                 <input type='text' placeholder='Nom' className={styles.formValue} required onChange={e => setSurname(e.target.value)} />
                 <input type='email' placeholder='Adresse mail' className={styles.formValue} required onChange={e => setMail(e.target.value)} />
                 <input type="text" placeholder="Téléphone" className={styles.formValue} required onChange={e => setPhone(e.target.value)} />
-                <input type="text" placeholder="Pour quel sport souhaitez vouys des tenues personalisées ?" className={styles.formValue} required onChange={e => setSport(e.target.value)} />
+                <input type="text" placeholder="Pour quel sport souhaitez vous des tenues personalisées ?" className={styles.formValue} required onChange={e => setSport(e.target.value)} />
                 <input type="text" placeholder="Quel est votre club?" className={styles.formValue} required onChange={e => setClub(e.target.value)} />
                 <input type="text" placeholder="Quel est votre rôle au sein du club?" className={styles.formValue} required onChange={e => setRole(e.target.value)} />
                 <select className={styles.formValue} required onChange={e => setQuantity(e.target.value)}>
