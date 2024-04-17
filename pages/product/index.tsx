@@ -82,6 +82,9 @@ export default function Product() {
             <div className={styles.title}>
                 Nos produits
             </div>
+            <div className={styles.subtitle}>
+                Quelques exemples de ce qu'on sait faire
+            </div>
             <div className={styles.cards}>
                 {data.map((item) => (
                     <div className={styles.card}>
